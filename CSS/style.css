@@ -1,0 +1,161 @@
+:root{
+--Softred: hsl(10, 79%, 65%);
+--Cyan: rgb(118, 181, 188);
+--Darkbrown: hsl(25, 47%, 15%);
+--Mediumbrown: hsl(28, 10%, 53%);
+--Cream: hsl(27, 66%, 92%);
+--Verypaleorange: hsl(33, 100%, 98%)
+}
+
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;    
+}
+ul{
+list-style: none;
+}
+body{
+    background-color: var(--Cream);
+    height: 100vh;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+    align-items: center;
+    font-family: "DM Sans", sans-serif;
+}
+
+/* Cabeza de informacion */
+
+.container{
+    width: 450px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.head{
+    color: var(--Verypaleorange);
+background-color: var(--Softred);
+border-radius: 1rem;
+padding: 1.2rem;
+display: flex;
+justify-content: space-between;
+}
+.balance>p{
+font-size: 1.7rem;
+margin-top: .4rem;
+font-weight: 700;
+}
+
+/* targeta de informacion  */
+
+.card{
+    background-color: var(--Verypaleorange);
+    border-radius: 1rem;
+    max-width: fit-content;
+    padding: 1.2rem;
+    margin-top: 1.2rem;
+    display: flex;
+flex-direction: column;
+    align-items: center;
+}
+
+.card>h3{
+   font-size: 1.2rem;
+}
+.chart__bars-container {
+    height: 13.75rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin-bottom: 1.8rem;
+  }
+  .chart__bar {
+    width: 2.3rem;
+    border-radius: 4px;
+    height: 12.5rem;
+    margin: 20px 10px 0   ;    
+    background-color: var(--Softred);
+    position: relative;
+    transition: all .5s ;
+  }
+  .chart__bar:hover {
+    cursor: pointer;
+    filter: brightness(1.2);
+  }
+  .chart__bar--label {
+display: none;
+    position: absolute;
+    top: -20px;
+    left: -4px;
+    width: 2.2rem;
+    text-align: center;
+    font-size: 0.5em;
+    background-color:var(--Darkbrown);
+    color: var(--Verypaleorange);
+    padding: 4px;
+    border-radius: 4px;
+    font-weight: 700;
+  }
+
+
+  .chart__bar--day {
+    position: absolute;
+    bottom: -16px;
+    font-size: 0.6em;
+    width: 32px;
+    text-align: center;
+  }
+
+
+
+
+
+/* Informacion final de la targeta */
+
+
+
+.info{
+  padding: 1rem;
+  border-top: 3px solid var(--Mediumbrown);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 2rem;
+}
+.info p{
+color: var(--Mediumbrown);
+}
+
+.total>span{
+    margin-top: 1rem;
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: black;
+}
+.rate>span{
+    font-weight: 700;
+    color: black;
+}
+
+
+
+/* Zona movil */
+
+@media screen and (max-width: 578px){
+
+  .container{
+    width: 100vw;
+  }
+
+  .chart__bar{
+    width: 1.5rem;
+  }
+
+
+
+
+
+
+
+}
